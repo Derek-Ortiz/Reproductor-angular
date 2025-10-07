@@ -1,5 +1,5 @@
 <div id="content">
     <app-info-song [song] = "actualSongs" ></app-info-song>
 
-    <app-media-control (requestSong)="changeSong($event)"></app-media-control>
+    <app-media-control [song] = "actualSongs"  (requestSong)="changeSong($event)" ></app-media-control>
 </div>

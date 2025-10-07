@@ -8,8 +8,20 @@ import { Component, computed, Input, input } from '@angular/core';
 })
 export class InfoSong {
 
+
+  constructor(){
+    alert("el componente infosong se inicio")
+  }
+
+  ngOnInit(): void{
+    console.log(this.song)
+    alert("Las entradas del componenete no se ha cargado")
+  }
+
   @Input({ required: true })
   song : any;
+
+
 
 
   // song_input = input();
