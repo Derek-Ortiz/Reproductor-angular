@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,21 @@ import { FormsModule } from '@angular/forms';
 })
 export class Search {
 
-  buscado : String = ""
+  buscado : string = ""
+
+  constructor(private router: Router) {}
+
+  getbuscado(): string{
+    return this.buscado;
+  }
+
+  onSearch(): void {
+    if (this.buscado.trim()) {
+      this.router.navigate(['/search'], { 
+        queryParams: { q: this.buscado } 
+      });
+    }
+  }
 
   
 }

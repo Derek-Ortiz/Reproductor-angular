@@ -5,8 +5,8 @@
         <a routerLink="" id="home-botton">Home</a>
         <a href="" id="Playlist">PlayList</a>
         <div class="nav-search-bar">
-            <input [(ngModel)]="buscado" type="text" id="search-input">
-            <a routerLink="/search" id="search-button" >🔎</a>
+            <input [(ngModel)]="buscado" type="text" id="search-input" (keyup.enter)="onSearch()">
+            <a (click)="onSearch()" id="search-button" >🔎</a>
         </div>
         
     </div>

@@ -1,2 +1,57 @@
-<p>search-items works!</p>
+<div class="search-results-container">
+    @if (searchItems$ | async; as results) {
+        <!-- Sección de Albums -->
+        @if (results.albums?.items?.length > 0) {
+            <section class="results-section">
+                <h2 class="section-title">Albums</h2>
+                <div class="cards-grid">
+                    @for (album of results.albums.items; track album.id) {
+                        <div class="card">
+                            <img [src]="album.images[0]?.url" [alt]="album.name" class="card-image">
+                            <div class="card-info">
+                                <h3 class="card-title">{{ album.name }}</h3>
+                                <p class="card-subtitle">{{ album.artists[0]?.name }}</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        }
 
+        <!-- Sección de Artists -->
+        @if (results.artists?.items?.length > 0) {
+            <section class="results-section">
+                <h2 class="section-title">Artists</h2>
+                <div class="cards-grid">
+                    @for (artist of results.artists.items; track artist.id) {
+                        <div class="card">
+                            <img [src]="artist.images[0]?.url || '/icon-profile.png'" [alt]="artist.name" class="card-image">
+                            <div class="card-info">
+                                <h3 class="card-title">{{ artist.name }}</h3>
+                                <p class="card-subtitle">{{ artist.followers?.total }} seguidores</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        }
+
+        <!-- Sección de Tracks -->
+        @if (results.tracks?.items?.length > 0) {
+            <section class="results-section">
+                <h2 class="section-title">Tracks</h2>
+                <div class="cards-grid">
+                    @for (track of results.tracks.items; track track.id) {
+                        <div class="card">
+                            <img [src]="track.album?.images[0]?.url" [alt]="track.name" class="card-image">
+                            <div class="card-info">
+                                <h3 class="card-title">{{ track.name }}</h3>
+                                <p class="card-subtitle">{{ track.artists[0]?.name }}</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        }
+    } 
+</div>
