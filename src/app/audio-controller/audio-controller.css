@@ -22,4 +22,5 @@
 
 .player-buttons span i{
     font-size: 2em;
+    cursor: pointer;
 }

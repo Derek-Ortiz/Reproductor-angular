@@ -18,7 +18,7 @@ export class SpotifyAlbumService {
 
   getAlbum(id: string): Observable<Album>{
     return this._http.get<SpotifyAlbumResponse>(
-      `${environment.API_URL}/albums/${id}`
+      `${environment.API_URL}albums/${id}`
     ).pipe(
       map(
         apiresponse => {

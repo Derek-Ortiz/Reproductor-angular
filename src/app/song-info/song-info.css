@@ -10,6 +10,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
+    color: white;
+    border-bottom:2px solid #7BA2DB;
 }
 
 :host(.card) .card-song-img{
@@ -20,7 +22,8 @@
 }
 
 :host(.card) .card-song-details{
-    width: 150px;
+    width: 200px;
+    height: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -33,19 +36,22 @@
     margin-bottom: 5px;
 }
 
-:host(.card) .card-song-details .card-song-artist{
+/* :host(.card) .card-song-details .card-song-artist{
     font-weight: 200;
     font-size: 1.2em;
-}
+} */
 
 
 :host(.main){
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #1E4064;
+    border-radius: 25px;
+    color: #ffffff;
 }
 
 :host(.main) .card-song-img{

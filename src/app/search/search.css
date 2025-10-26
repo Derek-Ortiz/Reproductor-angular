@@ -1,13 +1,82 @@
 .nav-bar{
     display: flex;
     justify-content: space-around;
-    background: blue;
+    background: #1E4064;
     width: 100%;
-    height: auto;
-    padding-left: 100px;
-    padding-right: 100px;
+    height: 80px;
+    align-items: center;
+
 }
 #search-button{
+    display: flex;
     border-radius: 50%;
-    background-color: cadetblue;
+    background-color: #7BA2DB;
+    width: 50px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+.icon{
+    width: 100px;
+    height: 100px;
+}
+.nav-left-side{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: auto;
+    align-items: center;
+}
+.nav-right-side{
+    display: grid;
+    justify-content: center;
+    color: white;
+    width: 20%;
+}
+.nav-display-bar{
+    font-size: 18px;
+    line-height: 0.8;
+    
+}
+
+.nav-display-botton{
+    border: 3px solid #7BA2DB;
+    color: #7BA2DB;
+    border-radius: 15px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-search-bar{
+    display: flex;
+    justify-content: space-between;   
+}
+
+#home-botton, #Playlist{
+    text-decoration: none;
+    font-size: 2rem;
+    border-bottom: 2px solid #7BA2DB;
+    color: white;
+}
+#home-botton:hover, #Playlist:Hover{
+    box-shadow: 0 8px 6px -6px #7BA2DB;
+}
+
+#search-input{
+    border: 3px solid #7BA2DB;
+    border-radius: 15px;
+    width: 100%;
+    padding: 8px 8px ;
+    background-color: #1E4064;
+    font-size: 1rem;
+    margin-right: 5px;
+}
+#search-input:focus{
+    background-color: white;
 }
