@@ -1,7 +1,16 @@
-# ARCHIVO DE PRUEBAS PARA UN FLUJO DE TRABAJO EN GITHUB
-name: archivo de deploy para inicial el bucket s3 con angular
+#ARCHIVO DE PRUEBA PARA UN FLUJO DE TRABAJO DE GITHUB
+name: archivo de deploy para bucket s3 con angular
 
-on 
-    push
-        branches
-            -main
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+    log-message:
+      runs-on: ubuntu-latest
+
+      steps:
+       - name: Print messsage
+         run: echo "Workflow ejecutado"
