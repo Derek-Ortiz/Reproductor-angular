@@ -1,0 +1,7 @@
+# ARCHIVO DE PRUEBAS PARA UN FLUJO DE TRABAJO EN GITHUB
+name: archivo de deploy para inicial el bucket s3 con angular
+
+on 
+    push
+        branches
+            -main

@@ -1,6 +1,6 @@
 <div class="search-results-container">
     @if (searchItems$ | async; as results) {
-        <!-- Sección de Albums -->
+        
         @if (results.albums?.items?.length > 0) {
             <section class="results-section">
                 <h2 class="section-title">Albums</h2>
@@ -18,7 +18,7 @@
             </section>
         }
 
-        <!-- Sección de Artists -->
+        
         @if (results.artists?.items?.length > 0) {
             <section class="results-section">
                 <h2 class="section-title">Artists</h2>
@@ -36,7 +36,7 @@
             </section>
         }
 
-        <!-- Sección de Tracks -->
+        
         @if (results.tracks?.items?.length > 0) {
             <section class="results-section">
                 <h2 class="section-title">Tracks</h2>

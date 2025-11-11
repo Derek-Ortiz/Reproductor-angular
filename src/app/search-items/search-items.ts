@@ -26,7 +26,7 @@ export class SearchItems implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Escuchar cambios en el query param 'q'
+    
     this.searchItems$ = this.route.queryParams.pipe(
       switchMap(params => {
         this.searchQuery = params['q'] || 'Artic';
@@ -35,7 +35,7 @@ export class SearchItems implements OnInit {
       })
     );
 
-    // Suscribirse para ver la respuesta en consola
+    
     this.searchItems$.subscribe({
       next: (data) => {
         console.log('✅ Datos recibidos:', data);
